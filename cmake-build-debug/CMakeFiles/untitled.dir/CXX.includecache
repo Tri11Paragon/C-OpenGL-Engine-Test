@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brett/CLionProjects/untitled/src/b_time/time.h
+
+/home/brett/CLionProjects/untitled/src/main.cpp
+iostream
+-
+glad/glad.h
+-
+GLFW/glfw3.h
+-
+b_time/time.h
+/home/brett/CLionProjects/untitled/src/b_time/time.h
+shaders/shader.h
+/home/brett/CLionProjects/untitled/src/shaders/shader.h
+
+/home/brett/CLionProjects/untitled/src/shaders/shader.h
+glad/glad.h
+-
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+
+glad/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+glad/include/glad/glad.h
+KHR/khrplatform.h
+-
+
