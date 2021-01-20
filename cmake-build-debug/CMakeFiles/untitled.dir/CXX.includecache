@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/brett/CLionProjects/untitled/src/b_time/time.h
+/home/brett/CLionProjects/untitled/src/gldata/vao.cpp
+vao.h
+/home/brett/CLionProjects/untitled/src/gldata/vao.h
+
+/home/brett/CLionProjects/untitled/src/gldata/vao.h
+iostream
+-
 
 /home/brett/CLionProjects/untitled/src/main.cpp
 iostream
@@ -15,10 +21,12 @@ glad/glad.h
 -
 GLFW/glfw3.h
 -
-b_time/time.h
-/home/brett/CLionProjects/untitled/src/b_time/time.h
+utils/time.h
+/home/brett/CLionProjects/untitled/src/utils/time.h
 shaders/shader.h
 /home/brett/CLionProjects/untitled/src/shaders/shader.h
+gldata/vao.h
+/home/brett/CLionProjects/untitled/src/gldata/vao.h
 
 /home/brett/CLionProjects/untitled/src/shaders/shader.h
 glad/glad.h
@@ -31,6 +39,8 @@ sstream
 -
 iostream
 -
+
+/home/brett/CLionProjects/untitled/src/utils/time.h
 
 glad/include/KHR/khrplatform.h
 stdint.h

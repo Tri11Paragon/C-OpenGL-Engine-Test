@@ -169,32 +169,32 @@ glad-generate-files/fast:
 	$(MAKE) $(MAKESILENT) -f glad/CMakeFiles/glad-generate-files.dir/build.make glad/CMakeFiles/glad-generate-files.dir/build
 .PHONY : glad-generate-files/fast
 
-src/b_time/time.o: src/b_time/time.cpp.o
+src/gldata/vao.o: src/gldata/vao.cpp.o
 
-.PHONY : src/b_time/time.o
+.PHONY : src/gldata/vao.o
 
 # target to build an object file
-src/b_time/time.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/b_time/time.cpp.o
-.PHONY : src/b_time/time.cpp.o
+src/gldata/vao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/gldata/vao.cpp.o
+.PHONY : src/gldata/vao.cpp.o
 
-src/b_time/time.i: src/b_time/time.cpp.i
+src/gldata/vao.i: src/gldata/vao.cpp.i
 
-.PHONY : src/b_time/time.i
+.PHONY : src/gldata/vao.i
 
 # target to preprocess a source file
-src/b_time/time.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/b_time/time.cpp.i
-.PHONY : src/b_time/time.cpp.i
+src/gldata/vao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/gldata/vao.cpp.i
+.PHONY : src/gldata/vao.cpp.i
 
-src/b_time/time.s: src/b_time/time.cpp.s
+src/gldata/vao.s: src/gldata/vao.cpp.s
 
-.PHONY : src/b_time/time.s
+.PHONY : src/gldata/vao.s
 
 # target to generate assembly for a file
-src/b_time/time.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/b_time/time.cpp.s
-.PHONY : src/b_time/time.cpp.s
+src/gldata/vao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/gldata/vao.cpp.s
+.PHONY : src/gldata/vao.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -250,6 +250,33 @@ src/shaders/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/shaders/shader.cpp.s
 .PHONY : src/shaders/shader.cpp.s
 
+src/utils/time.o: src/utils/time.cpp.o
+
+.PHONY : src/utils/time.o
+
+# target to build an object file
+src/utils/time.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/utils/time.cpp.o
+.PHONY : src/utils/time.cpp.o
+
+src/utils/time.i: src/utils/time.cpp.i
+
+.PHONY : src/utils/time.i
+
+# target to preprocess a source file
+src/utils/time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/utils/time.cpp.i
+.PHONY : src/utils/time.cpp.i
+
+src/utils/time.s: src/utils/time.cpp.s
+
+.PHONY : src/utils/time.s
+
+# target to generate assembly for a file
+src/utils/time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/utils/time.cpp.s
+.PHONY : src/utils/time.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -261,15 +288,18 @@ help:
 	@echo "... glad-generate-files"
 	@echo "... glad"
 	@echo "... untitled"
-	@echo "... src/b_time/time.o"
-	@echo "... src/b_time/time.i"
-	@echo "... src/b_time/time.s"
+	@echo "... src/gldata/vao.o"
+	@echo "... src/gldata/vao.i"
+	@echo "... src/gldata/vao.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/shaders/shader.o"
 	@echo "... src/shaders/shader.i"
 	@echo "... src/shaders/shader.s"
+	@echo "... src/utils/time.o"
+	@echo "... src/utils/time.i"
+	@echo "... src/utils/time.s"
 .PHONY : help
 
 

@@ -90,18 +90,18 @@ CMakeFiles/untitled.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/main.cpp -o CMakeFiles/untitled.dir/src/main.cpp.s
 
-CMakeFiles/untitled.dir/src/b_time/time.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/src/b_time/time.cpp.o: ../src/b_time/time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/src/b_time/time.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/b_time/time.cpp.o -c /home/brett/CLionProjects/untitled/src/b_time/time.cpp
+CMakeFiles/untitled.dir/src/utils/time.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/utils/time.cpp.o: ../src/utils/time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/src/utils/time.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/utils/time.cpp.o -c /home/brett/CLionProjects/untitled/src/utils/time.cpp
 
-CMakeFiles/untitled.dir/src/b_time/time.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/b_time/time.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/CLionProjects/untitled/src/b_time/time.cpp > CMakeFiles/untitled.dir/src/b_time/time.cpp.i
+CMakeFiles/untitled.dir/src/utils/time.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/utils/time.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/CLionProjects/untitled/src/utils/time.cpp > CMakeFiles/untitled.dir/src/utils/time.cpp.i
 
-CMakeFiles/untitled.dir/src/b_time/time.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/b_time/time.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/b_time/time.cpp -o CMakeFiles/untitled.dir/src/b_time/time.cpp.s
+CMakeFiles/untitled.dir/src/utils/time.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/utils/time.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/utils/time.cpp -o CMakeFiles/untitled.dir/src/utils/time.cpp.s
 
 CMakeFiles/untitled.dir/src/shaders/shader.cpp.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/src/shaders/shader.cpp.o: ../src/shaders/shader.cpp
@@ -116,18 +116,33 @@ CMakeFiles/untitled.dir/src/shaders/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/shaders/shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/shaders/shader.cpp -o CMakeFiles/untitled.dir/src/shaders/shader.cpp.s
 
+CMakeFiles/untitled.dir/src/gldata/vao.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/gldata/vao.cpp.o: ../src/gldata/vao.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled.dir/src/gldata/vao.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/gldata/vao.cpp.o -c /home/brett/CLionProjects/untitled/src/gldata/vao.cpp
+
+CMakeFiles/untitled.dir/src/gldata/vao.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/gldata/vao.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/CLionProjects/untitled/src/gldata/vao.cpp > CMakeFiles/untitled.dir/src/gldata/vao.cpp.i
+
+CMakeFiles/untitled.dir/src/gldata/vao.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/gldata/vao.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/gldata/vao.cpp -o CMakeFiles/untitled.dir/src/gldata/vao.cpp.s
+
 # Object files for target untitled
 untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/src/main.cpp.o" \
-"CMakeFiles/untitled.dir/src/b_time/time.cpp.o" \
-"CMakeFiles/untitled.dir/src/shaders/shader.cpp.o"
+"CMakeFiles/untitled.dir/src/utils/time.cpp.o" \
+"CMakeFiles/untitled.dir/src/shaders/shader.cpp.o" \
+"CMakeFiles/untitled.dir/src/gldata/vao.cpp.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
 untitled: CMakeFiles/untitled.dir/src/main.cpp.o
-untitled: CMakeFiles/untitled.dir/src/b_time/time.cpp.o
+untitled: CMakeFiles/untitled.dir/src/utils/time.cpp.o
 untitled: CMakeFiles/untitled.dir/src/shaders/shader.cpp.o
+untitled: CMakeFiles/untitled.dir/src/gldata/vao.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: /usr/local/lib/libglfw3.a
 untitled: glad/libglad.a
@@ -137,7 +152,7 @@ untitled: /usr/lib/x86_64-linux-gnu/libX11.so
 untitled: /usr/lib/x86_64-linux-gnu/libGLX.so
 untitled: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 untitled: CMakeFiles/untitled.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable untitled"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable untitled"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

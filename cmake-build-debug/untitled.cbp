@@ -149,10 +149,10 @@
 		<Unit filename="/home/brett/CLionProjects/untitled/cmake-build-debug/glad/src/glad.c.rule">
 			<Option target="glad"/>
 		</Unit>
-		<Unit filename="/home/brett/CLionProjects/untitled/src/b_time/time.cpp">
+		<Unit filename="/home/brett/CLionProjects/untitled/src/gldata/vao.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/brett/CLionProjects/untitled/src/b_time/time.h">
+		<Unit filename="/home/brett/CLionProjects/untitled/src/gldata/vao.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/brett/CLionProjects/untitled/src/main.cpp">
@@ -162,6 +162,12 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/brett/CLionProjects/untitled/src/shaders/shader.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/brett/CLionProjects/untitled/src/utils/time.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/brett/CLionProjects/untitled/src/utils/time.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/brett/CLionProjects/untitled/CMakeLists.txt">

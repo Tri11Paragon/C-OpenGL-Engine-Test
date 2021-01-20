@@ -1,8 +1,9 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "b_time/time.h"
+#include "utils/time.h"
 #include "shaders/shader.h"
+#include "gldata/vao.h"
 
 void key_callback(GLFWwindow* window, int key);
 
@@ -104,6 +105,7 @@ int main() {
     base.use();
     glBindVertexArray(VAO);
 
+    vao va(vertices, indices);
     long long last = getNanoTime();
     int frames = 0;
     while(!glfwWindowShouldClose(window))

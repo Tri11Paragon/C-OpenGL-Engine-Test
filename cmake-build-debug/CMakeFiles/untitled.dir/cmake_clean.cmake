@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/src/b_time/time.cpp.o"
+  "CMakeFiles/untitled.dir/src/gldata/vao.cpp.o"
   "CMakeFiles/untitled.dir/src/main.cpp.o"
   "CMakeFiles/untitled.dir/src/shaders/shader.cpp.o"
+  "CMakeFiles/untitled.dir/src/utils/time.cpp.o"
   "untitled"
   "untitled.pdb"
 )
