@@ -169,33 +169,6 @@ glad-generate-files/fast:
 	$(MAKE) $(MAKESILENT) -f glad/CMakeFiles/glad-generate-files.dir/build.make glad/CMakeFiles/glad-generate-files.dir/build
 .PHONY : glad-generate-files/fast
 
-src/gldata/vao.o: src/gldata/vao.cpp.o
-
-.PHONY : src/gldata/vao.o
-
-# target to build an object file
-src/gldata/vao.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/gldata/vao.cpp.o
-.PHONY : src/gldata/vao.cpp.o
-
-src/gldata/vao.i: src/gldata/vao.cpp.i
-
-.PHONY : src/gldata/vao.i
-
-# target to preprocess a source file
-src/gldata/vao.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/gldata/vao.cpp.i
-.PHONY : src/gldata/vao.cpp.i
-
-src/gldata/vao.s: src/gldata/vao.cpp.s
-
-.PHONY : src/gldata/vao.s
-
-# target to generate assembly for a file
-src/gldata/vao.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/gldata/vao.cpp.s
-.PHONY : src/gldata/vao.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -288,9 +261,6 @@ help:
 	@echo "... glad-generate-files"
 	@echo "... glad"
 	@echo "... untitled"
-	@echo "... src/gldata/vao.o"
-	@echo "... src/gldata/vao.i"
-	@echo "... src/gldata/vao.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

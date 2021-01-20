@@ -4,6 +4,7 @@
 #include "utils/time.h"
 #include "shaders/shader.h"
 #include "gldata/vao.h"
+#include "gldata/image.h"
 
 void key_callback(GLFWwindow* window, int key);
 
@@ -43,6 +44,11 @@ unsigned int indices[] = {  // note that we start from 0!
         0, 1, 3,   // first triangle
         1, 2, 3    // second triangle
 };
+float texCoords[] = {
+        0.0f, 0.0f,  // lower-left corner
+        1.0f, 0.0f,  // lower-right corner
+        0.5f, 1.0f   // top-center corner
+};
 
 int main() {
     std::cout << "Init GLFW" << std::endl;
@@ -80,9 +86,6 @@ int main() {
 
     unsigned int VBO;
     glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
     unsigned int EBO;
     glGenBuffers(1, &EBO);
     unsigned int VAO;
@@ -103,9 +106,10 @@ int main() {
     // 2. use our shader program when we want to render an object
     Shader base("/home/brett/CLionProjects/untitled/src/shaders/vertex.glsl", "/home/brett/CLionProjects/untitled/src/shaders/fragment.glsl");
     base.use();
-    glBindVertexArray(VAO);
 
-    vao va(vertices, indices);
+    vao va(vertices, indices, sizeof(vertices), sizeof(indices));
+    glBindVertexArray(VAO);
+    va.bind();
     long long last = getNanoTime();
     int frames = 0;
     while(!glfwWindowShouldClose(window))
@@ -132,8 +136,6 @@ int main() {
             last = getNanoTime();
         }
     }
-
-    glDeleteProgram(base.ID);
 
     glfwTerminate();
     return 0;
