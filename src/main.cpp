@@ -45,9 +45,10 @@ unsigned int indices[] = {  // note that we start from 0!
         1, 2, 3    // second triangle
 };
 float texCoords[] = {
-        0.0f, 0.0f,  // lower-left corner
-        1.0f, 0.0f,  // lower-right corner
-        0.5f, 1.0f   // top-center corner
+        1.0f, 1.0f,   // top right
+        1.0f, 0.0f,   // bottom right
+        0.0f, 0.0f,   // bottom left
+        0.0f, 1.0f    // top left
 };
 
 int main() {
@@ -84,32 +85,15 @@ int main() {
     glfwSetKeyCallback(window, key_callback);
     glfwSwapInterval(0);
 
-    unsigned int VBO;
-    glGenBuffers(1, &VBO);
-    unsigned int EBO;
-    glGenBuffers(1, &EBO);
-    unsigned int VAO;
-    glGenVertexArrays(1, &VAO);
-    // ..:: Initialization code :: ..
-    // 1. bind Vertex Array Object
-    glBindVertexArray(VAO);
-    // 2. copy our vertices array in a vertex buffer for OpenGL to use
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    // 3. copy our index array in a element buffer for OpenGL to use
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-    // 4. then set the vertex attributes pointers
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-
     // 2. use our shader program when we want to render an object
     Shader base("/home/brett/CLionProjects/untitled/src/shaders/vertex.glsl", "/home/brett/CLionProjects/untitled/src/shaders/fragment.glsl");
     base.use();
 
-    vao va(vertices, indices, sizeof(vertices), sizeof(indices));
-    glBindVertexArray(VAO);
-    va.bind();
+    vao va(vertices, texCoords, indices, sizeof(vertices), sizeof(texCoords), sizeof(indices));
+    image img("/home/brett/CLionProjects/untitled/src/res/bluestone.png");
+    img.use();
+    va.use();
+
     long long last = getNanoTime();
     int frames = 0;
     while(!glfwWindowShouldClose(window))
@@ -120,9 +104,9 @@ int main() {
 
         // render
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, va.size, GL_UNSIGNED_INT, 0);
 
         // glfw stuff
         glfwSwapBuffers(window);
