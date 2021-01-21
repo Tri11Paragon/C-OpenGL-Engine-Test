@@ -12,6 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
   "../glad/CMakeLists.txt"
+  "../glm/CMakeLists.txt"
+  "../glm/glm/CMakeLists.txt"
   "/opt/jetbrains/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/opt/jetbrains/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/opt/jetbrains/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -55,6 +57,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "glad/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "glm/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "glm/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

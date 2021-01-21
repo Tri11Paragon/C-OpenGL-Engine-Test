@@ -5,3 +5,7 @@
 /home/brett/CLionProjects/untitled/cmake-build-debug/glad/CMakeFiles/rebuild_cache.dir
 /home/brett/CLionProjects/untitled/cmake-build-debug/glad/CMakeFiles/glad.dir
 /home/brett/CLionProjects/untitled/cmake-build-debug/glad/CMakeFiles/glad-generate-files.dir
+/home/brett/CLionProjects/untitled/cmake-build-debug/glm/CMakeFiles/rebuild_cache.dir
+/home/brett/CLionProjects/untitled/cmake-build-debug/glm/CMakeFiles/edit_cache.dir
+/home/brett/CLionProjects/untitled/cmake-build-debug/glm/glm/CMakeFiles/rebuild_cache.dir
+/home/brett/CLionProjects/untitled/cmake-build-debug/glm/glm/CMakeFiles/edit_cache.dir

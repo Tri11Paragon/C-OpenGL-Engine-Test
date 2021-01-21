@@ -75,17 +75,20 @@ CMAKE_BINARY_DIR = /home/brett/CLionProjects/untitled/cmake-build-debug
 # The main recursive "all" target.
 all: CMakeFiles/untitled.dir/all
 all: glad/all
+all: glm/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: glad/preinstall
+preinstall: glm/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/untitled.dir/clean
 clean: glad/clean
+clean: glm/clean
 
 .PHONY : clean
 
@@ -107,6 +110,42 @@ glad/clean: glad/CMakeFiles/glad.dir/clean
 glad/clean: glad/CMakeFiles/glad-generate-files.dir/clean
 
 .PHONY : glad/clean
+
+#=============================================================================
+# Directory level rules for directory glm
+
+# Recursive "all" directory target.
+glm/all: glm/glm/all
+
+.PHONY : glm/all
+
+# Recursive "preinstall" directory target.
+glm/preinstall: glm/glm/preinstall
+
+.PHONY : glm/preinstall
+
+# Recursive "clean" directory target.
+glm/clean: glm/glm/clean
+
+.PHONY : glm/clean
+
+#=============================================================================
+# Directory level rules for directory glm/glm
+
+# Recursive "all" directory target.
+glm/glm/all:
+
+.PHONY : glm/glm/all
+
+# Recursive "preinstall" directory target.
+glm/glm/preinstall:
+
+.PHONY : glm/glm/preinstall
+
+# Recursive "clean" directory target.
+glm/glm/clean:
+
+.PHONY : glm/glm/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/untitled.dir

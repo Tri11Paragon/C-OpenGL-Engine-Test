@@ -1,10 +1,15 @@
 #include <iostream>
+#include <filesystem>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "utils/time.h"
 #include "shaders/shader.h"
 #include "gldata/vao.h"
 #include "gldata/image.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include "utils/camera.h"
 
 void key_callback(GLFWwindow* window, int key);
 
@@ -13,6 +18,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 // called when user resizes the window
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
+    project = glm::perspective(glm::radians(90.0f), (float)width/(float)height, 0.1f, 1000.0f);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
@@ -53,6 +59,7 @@ float texCoords[] = {
 
 int main() {
     std::cout << "Init GLFW" << std::endl;
+    std::cout << std::filesystem::current_path() << std::endl;
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -77,6 +84,7 @@ int main() {
         return -1;
     }
     glViewport(0, 0, width, height);
+    project = glm::perspective(glm::radians(70.0f), (float)width/(float)height, 0.1f, 1000.0f);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     //glfwSetWindowSizeCallback(window, framebuffer_size_callback);
     glfwSetCursorPosCallback(window, cursor_callback);
@@ -87,6 +95,7 @@ int main() {
 
     // 2. use our shader program when we want to render an object
     Shader base("/home/brett/CLionProjects/untitled/src/shaders/vertex.glsl", "/home/brett/CLionProjects/untitled/src/shaders/fragment.glsl");
+    base.setProjectionMatrix(project);
     base.use();
 
     vao va(vertices, texCoords, indices, sizeof(vertices), sizeof(texCoords), sizeof(indices));

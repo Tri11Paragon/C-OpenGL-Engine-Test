@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++2a
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/brett/CLionProjects/untitled/cmake-build-debug/glad/include 
+CXX_INCLUDES = -I/home/brett/CLionProjects/untitled/cmake-build-debug/glad/include -I/home/brett/CLionProjects/untitled/glm/glm/.. 
 

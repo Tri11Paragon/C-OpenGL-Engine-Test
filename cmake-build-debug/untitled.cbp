@@ -5,7 +5,7 @@
 		<Option title="untitled"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\glad\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\glad\;CMake Files\glm\;CMake Files\glm\glm\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/brett/CLionProjects/untitled/cmake-build-debug"/>
@@ -45,6 +45,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/brett/CLionProjects/untitled/cmake-build-debug/glad/include"/>
+					<Add directory="/home/brett/CLionProjects/untitled/glm/glm/.."/>
 					<Add directory="/usr/include/c++/10"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
 					<Add directory="/usr/include/c++/10/backward"/>
@@ -68,6 +69,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/brett/CLionProjects/untitled/cmake-build-debug/glad/include"/>
+					<Add directory="/home/brett/CLionProjects/untitled/glm/glm/.."/>
 					<Add directory="/usr/include/c++/10"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
 					<Add directory="/usr/include/c++/10/backward"/>
@@ -169,6 +171,12 @@
 		</Unit>
 		<Unit filename="/home/brett/CLionProjects/untitled/glad/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\glad\"/>
+		</Unit>
+		<Unit filename="/home/brett/CLionProjects/untitled/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glm\"/>
+		</Unit>
+		<Unit filename="/home/brett/CLionProjects/untitled/glm/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glm\glm\"/>
 		</Unit>
 		<Unit filename="/home/brett/CLionProjects/untitled/../../../../usr/local/lib/cmake/glfw3/glfw3Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\"/>

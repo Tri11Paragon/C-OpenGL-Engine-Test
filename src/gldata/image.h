@@ -24,6 +24,7 @@ public:
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
         int width, height, nrChannels;
+        stbi_set_flip_vertically_on_load(true);
         unsigned char *data = stbi_load(file, &width, &height, &nrChannels, 0);
         if (data) {
             if (nrChannels > 3)
