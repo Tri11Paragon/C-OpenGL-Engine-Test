@@ -90,22 +90,9 @@ CMakeFiles/untitled.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/main.cpp -o CMakeFiles/untitled.dir/src/main.cpp.s
 
-CMakeFiles/untitled.dir/src/utils/time.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/src/utils/time.cpp.o: ../src/utils/time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/src/utils/time.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/utils/time.cpp.o -c /home/brett/CLionProjects/untitled/src/utils/time.cpp
-
-CMakeFiles/untitled.dir/src/utils/time.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/utils/time.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/CLionProjects/untitled/src/utils/time.cpp > CMakeFiles/untitled.dir/src/utils/time.cpp.i
-
-CMakeFiles/untitled.dir/src/utils/time.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/utils/time.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/utils/time.cpp -o CMakeFiles/untitled.dir/src/utils/time.cpp.s
-
 CMakeFiles/untitled.dir/src/shaders/shader.cpp.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/src/shaders/shader.cpp.o: ../src/shaders/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled.dir/src/shaders/shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/src/shaders/shader.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/shaders/shader.cpp.o -c /home/brett/CLionProjects/untitled/src/shaders/shader.cpp
 
 CMakeFiles/untitled.dir/src/shaders/shader.cpp.i: cmake_force
@@ -116,18 +103,31 @@ CMakeFiles/untitled.dir/src/shaders/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/shaders/shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/shaders/shader.cpp -o CMakeFiles/untitled.dir/src/shaders/shader.cpp.s
 
+CMakeFiles/untitled.dir/src/utils/time.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/utils/time.cpp.o: ../src/utils/time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled.dir/src/utils/time.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/utils/time.cpp.o -c /home/brett/CLionProjects/untitled/src/utils/time.cpp
+
+CMakeFiles/untitled.dir/src/utils/time.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/utils/time.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/CLionProjects/untitled/src/utils/time.cpp > CMakeFiles/untitled.dir/src/utils/time.cpp.i
+
+CMakeFiles/untitled.dir/src/utils/time.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/utils/time.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/CLionProjects/untitled/src/utils/time.cpp -o CMakeFiles/untitled.dir/src/utils/time.cpp.s
+
 # Object files for target untitled
 untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/src/main.cpp.o" \
-"CMakeFiles/untitled.dir/src/utils/time.cpp.o" \
-"CMakeFiles/untitled.dir/src/shaders/shader.cpp.o"
+"CMakeFiles/untitled.dir/src/shaders/shader.cpp.o" \
+"CMakeFiles/untitled.dir/src/utils/time.cpp.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
 untitled: CMakeFiles/untitled.dir/src/main.cpp.o
-untitled: CMakeFiles/untitled.dir/src/utils/time.cpp.o
 untitled: CMakeFiles/untitled.dir/src/shaders/shader.cpp.o
+untitled: CMakeFiles/untitled.dir/src/utils/time.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: /usr/local/lib/libglfw3.a
 untitled: glad/libglad.a

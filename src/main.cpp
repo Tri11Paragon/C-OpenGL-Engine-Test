@@ -11,7 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "utils/camera.h"
 
-void key_callback(GLFWwindow* window, int key);
+Shader base;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
@@ -19,11 +19,12 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
     project = glm::perspective(glm::radians(90.0f), (float)width/(float)height, 0.1f, 1000.0f);
+    base.setProjectionMatrix(project);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
-    if (key == GLFW_KEY_ESCAPE)
-        glfwSetWindowShouldClose(window, true);
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
+        glfwSetInputMode(window, GLFW_CURSOR, glfwGetInputMode(window, GLFW_CURSOR) == GLFW_CURSOR_DISABLED ? GLFW_CURSOR_NORMAL : GLFW_CURSOR_DISABLED);
 }
 
 void cursor_callback(GLFWwindow* window, double xpos, double ypos){
@@ -32,6 +33,11 @@ void cursor_callback(GLFWwindow* window, double xpos, double ypos){
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset){
 
+}
+
+void mouse_callback(GLFWwindow* window, double mouseX, double mouseY){
+    mx = mouseX;
+    my = mouseY;
 }
 
 void processInput(GLFWwindow *window)
@@ -84,19 +90,24 @@ int main() {
         return -1;
     }
     glViewport(0, 0, width, height);
-    project = glm::perspective(glm::radians(70.0f), (float)width/(float)height, 0.1f, 1000.0f);
+    project = glm::perspective(glm::radians(90.0f), (float)width/(float)height, 0.1f, 1000.0f);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     //glfwSetWindowSizeCallback(window, framebuffer_size_callback);
     glfwSetCursorPosCallback(window, cursor_callback);
     glfwSetScrollCallback(window, scroll_callback);
+    glfwSetCursorPosCallback(window, mouse_callback);
 
     glfwSetKeyCallback(window, key_callback);
     glfwSwapInterval(0);
 
     // 2. use our shader program when we want to render an object
-    Shader base("/home/brett/CLionProjects/untitled/src/shaders/vertex.glsl", "/home/brett/CLionProjects/untitled/src/shaders/fragment.glsl");
-    base.setProjectionMatrix(project);
+    base = Shader("/home/brett/CLionProjects/untitled/src/shaders/vertex.glsl", "/home/brett/CLionProjects/untitled/src/shaders/fragment.glsl");
     base.use();
+    base.setProjectionMatrix(project);
+    glm::mat4 trans = glm::mat4(1.0f);
+    trans = glm::scale(trans, glm::vec3(5, 5, 5));
+    trans = glm::translate(trans, glm::vec3(0, 0, -1));
+    base.setTransformationMatrix(trans);
 
     vao va(vertices, texCoords, indices, sizeof(vertices), sizeof(texCoords), sizeof(indices));
     image img("/home/brett/CLionProjects/untitled/src/res/bluestone.png");
@@ -110,6 +121,12 @@ int main() {
         long long start = getNanoTime();
         // input
         processInput(window);
+        // move the camera
+        move(window);
+        // update all shader view matrix
+        base.setViewMatrix(view);
+        lx = mx;
+        ly = my;
 
         // render
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);

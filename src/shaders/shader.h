@@ -20,6 +20,10 @@ class Shader
 {
 public:
     unsigned int ID;
+    unsigned int projectionID;
+    unsigned int viewID;
+    unsigned int transformationID;
+    Shader(){}
     // constructor generates the shader on the fly
     // ------------------------------------------------------------------------
     Shader(const char* vertexPath, const char* fragmentPath)
@@ -76,6 +80,8 @@ public:
         glDeleteShader(vertex);
         glDeleteShader(fragment);
         projectionID = glGetUniformLocation(ID, "projection");
+        viewID = glGetUniformLocation(ID, "view");
+        transformationID = glGetUniformLocation(ID, "transform");
     }
     // activate the shader
     // ------------------------------------------------------------------------
@@ -103,9 +109,14 @@ public:
     void setProjectionMatrix(glm::mat4 projectionMatrix) const {
         glUniformMatrix4fv(projectionID, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
     }
+    void setTransformationMatrix(glm::mat4 transformationMatrix) const {
+        glUniformMatrix4fv(transformationID, 1, GL_FALSE, glm::value_ptr(transformationMatrix));
+    }
+    void setViewMatrix(glm::mat4 viewMatrix) const {
+        glUniformMatrix4fv(viewID, 1, GL_FALSE, glm::value_ptr(viewMatrix));
+    }
 
 private:
-    unsigned int projectionID;
     // utility function for checking shader compilation/linking errors.
     // ------------------------------------------------------------------------
     void checkCompileErrors(unsigned int shader, std::string type)
